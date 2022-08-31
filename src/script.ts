@@ -24,13 +24,19 @@ function printDinos(dinos: DinosaurData[]): void {
     });
 }
 
+interface Safe<T> {
+    code: number;
+    data: T;
+}
 
+let safeNumber: Safe<number> = { data: 42, code: 123 };
+let safeString: Safe<string> = { data: 'hello', code: 321 };
 
 
 //a. Ett sätt att bestämma vad för typ en variabel ska ha
 //b. En mall för hur ett objekt ska struktureras med bestämda typer
-//c. String, number, boolean, array
-//d. tuple, enum, void, never
+//c. String, number, boolean, object, null, undefined, symbol, bigint
+//d. tuple, enum, void, never, any, unknown
 //e. ett sätt att bestämma vilken/vilka typer exempelvis en array ska innehålla
 
 
